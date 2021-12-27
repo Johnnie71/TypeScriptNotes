@@ -1,7 +1,10 @@
 /*
-Merging all definitions of and interface
+Merging is great when we have a need to extend some
+type declarations from a module or package that we cant
+edit directly! 
 */
 
+// Merging all definitions of an interface
 interface Cart {
 	calculateTotal(): number;
 }
