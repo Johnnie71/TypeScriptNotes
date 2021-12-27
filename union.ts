@@ -13,6 +13,7 @@ function someFn(myArgument: number | string | boolean) {
 	}
 }
 
+// Using interfaces with functions that have union types
 interface Dog {
 	bark(): void;
 	walk(): void;
