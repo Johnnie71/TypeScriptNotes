@@ -16,3 +16,16 @@ interface C {
 function x(obj: A & B & C) {
 	return obj.a + obj.b + obj.c;
 }
+
+/* 
+function that takes in two objects and combines them returning
+a third object that contains all the members of these objects.
+*/
+
+function combine<ObjA, ObjB>(objA: ObjA, objB: ObjB): ObjA & ObjB {
+	return { ...objA, ...objB };
+}
+
+const objA = { a: 1 };
+const objB = { b: 2 };
+const result = combine(objA, objB);
