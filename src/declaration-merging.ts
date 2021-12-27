@@ -83,3 +83,16 @@ namespace Vegetables {
 }
 
 const salad = Vegetables.makeSalad();
+
+/* 
+Using a namespace to add static members to a class that
+exists already, but can't edit it.
+*/
+
+class Salad {}
+
+namespace Salad {
+	export const availableDressings = ["olive oil", "cilantro", "avocado"];
+}
+
+Salad.availableDressings.includes("olive oil");
