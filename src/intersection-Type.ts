@@ -22,7 +22,10 @@ function that takes in two objects and combines them returning
 a third object that contains all the members of these objects.
 */
 
-function combine<ObjA, ObjB>(objA: ObjA, objB: ObjB): ObjA & ObjB {
+function combine<ObjA extends object, ObjB extends object>(
+	objA: ObjA,
+	objB: ObjB
+): ObjA & ObjB {
 	return { ...objA, ...objB };
 }
 
