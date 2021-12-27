@@ -1,5 +1,6 @@
 /*
-A type alias is used to create a new name for some type for complex types
+A type alias is used to create a new name for an existing type,
+commoly used for complexed types.
  */
 
 type Alias1 = string | string[] | null;
