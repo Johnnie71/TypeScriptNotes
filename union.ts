@@ -36,3 +36,23 @@ function callMyPet(pet: Dog | Cat) {
 		pet.meow();
 	}
 }
+
+// Using union types with classes
+
+class Foo {
+	foo: number;
+	commonProp: string;
+}
+
+class Bar {
+	bar: number;
+	commonProp: string;
+}
+
+function fooBarFunction(obj: Foo | Bar) {
+	if (obj instanceof Foo) {
+		obj.foo;
+	} else {
+		obj.bar;
+	}
+}
