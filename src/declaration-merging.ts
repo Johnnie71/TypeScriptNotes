@@ -49,3 +49,17 @@ const someInterface: MyNamespace.SomeInterface = {
 	x: 1,
 	y: 2,
 };
+
+/*
+Extending a function with some properties and methods using namespaces
+ */
+
+function someFunction() {
+	return 10;
+}
+
+namespace someFunction {
+	export const someProperty = 10;
+}
+
+someFunction.someProperty;
