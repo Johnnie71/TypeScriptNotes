@@ -12,3 +12,22 @@ function someFn(myArgument: number | string | boolean) {
 		myArgument;
 	}
 }
+
+interface Dog {
+	bark(): void;
+	walk(): void;
+}
+
+interface Cat {
+	meow(): void;
+	walk(): void;
+}
+
+function callMyPet(pet: Dog | Cat) {
+	pet.walk();
+	if ((<Dog>pet).bark) {
+		(<Dog>pet).bark();
+	} else {
+		(<Cat>pet).meow();
+	}
+}
